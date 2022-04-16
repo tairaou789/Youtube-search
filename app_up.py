@@ -1,6 +1,5 @@
 from nturl2path import url2pathname
 from googleapiclient.discovery import build
-from google.auth.transport.requests import Request
 import json
 import pandas as pd
 import streamlit as st
