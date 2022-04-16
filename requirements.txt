@@ -1,2 +1,5 @@
 streamlit
 build
+pandas
+nturl2path
+discovery
