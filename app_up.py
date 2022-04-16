@@ -3,6 +3,7 @@ from googleapiclient.discovery import build
 import json
 import pandas as pd
 import streamlit as st
+from PIL import Image
 
 with open('secret.json') as f:
     secret = json.load(f)
