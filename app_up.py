@@ -72,6 +72,8 @@ def get_results(df_video, threshold, viewdata):
 
     videos_info = []
     items = videos_list['items']
+    print('itmes')
+    print(items)
     for item in items:
         video_info = {}
         video_info['video_id'] = item['id']
@@ -84,8 +86,10 @@ def get_results(df_video, threshold, viewdata):
     # st.image("https://static.streamlit.io/examples/cat.jpg", use_column_width=True)
 
     try:
+        print(df_extracted)
+        print(df_vieos_info)
         results = pd.merge(left=df_extracted, right=df_vieos_info, on ='video_id')
-        images = df_extracted['thumbnails']
+        images = results['thumbnails']
         results = results.loc[:,['video_id', 'title', 'view_count', 'subscriber_count', 'channel_id', 'thumbnails']]
 
     except:
